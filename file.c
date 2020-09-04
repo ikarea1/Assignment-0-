@@ -12,12 +12,6 @@ enum file_type {
     ASCII,
 };
 
-const char * const FILE_TYPE_STRINGS[] = {
-    "data",
-    "empty",
-    "ascii",
-};
-
 int print_error(char *path, int errnum) {
     return fprintf(stdout, "%s: cannot determine (%s)\n",
     path, strerror(errnum));
@@ -30,7 +24,7 @@ int main (int argc, char* argv[]) {
         return(EXIT_FAILURE);
     }
     FILE* f_in = fopen(filename, "r");
-    // assert(f_in != NULL);
+
     if (f_in == NULL) {
         print_error(filename, errno);
         return(EXIT_SUCCESS);
