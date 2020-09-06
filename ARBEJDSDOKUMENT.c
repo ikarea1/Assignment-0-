@@ -67,43 +67,43 @@ int main (int argc, char* argv[]) {
         // case ASCII: printf("%s: \n", filename); return 3;
         // default: printf("not special"); break;
     // }
-    switch (FILE_TYPE_STRINGS)
-    {
-    // case :
-        /* code */
-        break;
+//     switch (FILE_TYPE_STRINGS)
+//     {
+//     // case :
+//         /* code */
+//         break;
     
-    default:
-        break;
-    }
-    if (c == EOF) {
-        printf("%s: empty\n", filename);
-    }
+//     default:
+//         break;
+//     }
+//     if (c == EOF) {
+//         printf("%s: empty\n", filename);
+//     }
 
-    while (c != EOF) {
-        if ((c >= 0x07 && c <= 0x0D) || (c == 0x1B) || (c >= 0x20 && c <= 0x7E)) { 
-            c = fgetc(f_in);
-            return(files(2));
-        }
-        else {
-            return(files(0));
-        }
-    }
-    if (files(0)) {
-        printf("%s: data\n", filename);
-    }
+//     while (c != EOF) {
+//         if ((c >= 0x07 && c <= 0x0D) || (c == 0x1B) || (c >= 0x20 && c <= 0x7E)) { 
+//             c = fgetc(f_in);
+//             return(files(2));
+//         }
+//         else {
+//             return(files(0));
+//         }
+//     }
+//     if (files(0)) {
+//         printf("%s: data\n", filename);
+//     }
 
-    if (files(1)) {
-        printf("%s: empty\n", filename);
-    }
+//     if (files(1)) {
+//         printf("%s: empty\n", filename);
+//     }
 
-    if (files(2)) {
-        printf("%s: ASCII text\n", filename);
-    }
+//     if (files(2)) {
+//         printf("%s: ASCII text\n", filename);
+//     }
 
 
 
-    // byg logikken op på en ny måde så jeg starter med while loopet der looper over det hele
-    fclose(f_in);
-    return(EXIT_SUCCESS);
-}
+//     // byg logikken op på en ny måde så jeg starter med while loopet der looper over det hele
+//     fclose(f_in);
+//     return(EXIT_SUCCESS);
+// }

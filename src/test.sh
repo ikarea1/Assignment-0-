@@ -13,11 +13,16 @@ rm -f test_files/*
 
 echo "Generating test files.."
 printf "Hello, World!\n" > test_files/ascii.input
+printf "In this World we can test the different allowed ASCII characters like \x08 , \x09 , \x0A , \x0B , \x0C , \x0D
+and even characters like \x1A! \n" > test_files/ascii1.input
 printf "Hello, World!" > test_files/ascii2.input
-printf "Hello,\x00World!\n" > test_files/data.input
-printf "" > test_files/empty.input
-### TODO: Generate more test files ###
 
+printf "Hello,\x00World!\n" > test_files/data.input
+printf "Hello,\x06World!\n" > test_files/data1.input
+printf "Hello, \0x15World!\n" > test_files/data2.input
+
+printf "" > test_files/empty.input
+> test_files/empty1.input
 
 echo "Running the tests.."
 exitcode=0

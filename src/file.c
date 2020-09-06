@@ -38,7 +38,7 @@ int main (int argc, char* argv[]) {
     /// <returns> Returns the enum variable var </returns> 
     char c = fgetc(f_in);
     if (c == EOF) {
-        var = 1;
+        var = EMPTY;
     }
 
     /// <summary> It checks if it is end of file and if it not, it will access either flow chart and determines if it is 
@@ -48,10 +48,10 @@ int main (int argc, char* argv[]) {
     while (c != EOF) {
         if ((c >= 0x07 && c <= 0x0D) || (c == 0x1B) || (c >= 0x20 && c <= 0x7E)) { 
             c = fgetc(f_in);
-            var = 2;
+            var = ASCII;
         }
         else {
-            var = 0;
+            var = DATA;
             c = EOF;
         }
     }
