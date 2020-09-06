@@ -30,6 +30,7 @@ int main (int argc, char* argv[]) {
 
     if (f_in == NULL) {
         print_error(filename, errno);
+        fclose(f_in);
         return(EXIT_SUCCESS);
     }
     enum file_type var;
